@@ -5,7 +5,7 @@ module Bberg
   # path to where the bloomberg java API jar can be found
   #
   # either uses the path in the env variable BBERG_JAVA_HOME
-  #  or defaults to 'C:/blp/API/APIv3/JavaAPI/v3.3.3.3/lib'
+  #  or defaults to 'C:/blp/API/blpapi_java_3.6.1.0/bin'
   # @return [String] path to jar
   def self.jar_path
     # load either from BBERG_JAVA_HOME or the default location
@@ -20,13 +20,16 @@ module Bberg
     import com.bloomberglp.blpapi.Datetime
     import com.bloomberglp.blpapi.Element
     import com.bloomberglp.blpapi.Event
+    import com.bloomberglp.blpapi.InvalidRequestException
+    import com.bloomberglp.blpapi.Logging
     import com.bloomberglp.blpapi.Message
     import com.bloomberglp.blpapi.MessageIterator
+    import com.bloomberglp.blpapi.Name
     import com.bloomberglp.blpapi.Request
     import com.bloomberglp.blpapi.Service
     import com.bloomberglp.blpapi.Session
     import com.bloomberglp.blpapi.SessionOptions
-    import com.bloomberglp.blpapi.Schema
+    import com.bloomberglp.blpapi.Schema    
   end
 
 end

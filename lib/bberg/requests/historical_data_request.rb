@@ -42,6 +42,7 @@ module Bberg
         request.set("startDate", @start_time.strftime("%Y%m%d"))
         request.set("endDate", @end_time.strftime("%Y%m%d"))
         request.set("periodicitySelection", @options[:frequency])
+        request.set("nonTradingDayFillOption", "ALL_CALENDAR_DAYS")
         request.set("returnEids", false)
         @identifiers.each {|identifier| request.append("securities", identifier) }
         @options[:fields].each {|f| request.append("fields", f) }
